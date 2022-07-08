@@ -1,114 +1,171 @@
-<div>&nbsp;└┬ 📂 wave/　-----------> root directory</div>
-<div>&emsp;├─ 📄 .github　-----------> git issue template</div>
-<div>&emsp;├┬ 📂 client/　-----------> front-end</div>
-<div>&emsp;│├┬ 📂 src/</div>
-<div>&emsp;││├┬ 📂 api/　-----------> video 관련 RestAPI</div>
-<div>&emsp;│││├─ 📄 index.ts　-----------> Rest API method별 정의</div>
-<div>&emsp;│││└─ 📄 video.ts　-----------> video upload 및 서버에 저장된 목록 불러오기</div>
-<div>&emsp;││├┬ 📂 componetns/</div>
-<div>&emsp;│││├┬ 📂 atoms/　-----------> 원자 단위 컴포넌트</div>
-<div>&emsp;││││├─ 📂 Button/</div>
-<div>&emsp;││││├─ 📂 Encoding/　-----------> 완료된 영상 파일 인코딩 시 팝업되는 모달</div>
-<div>&emsp;││││├─ 📂 Loading/　-----------> 초기화면, 영상 불러오기 등에 사용되는 로딩 모달</div>
-<div>&emsp;││││├─ 📂 Logo/　-----------> 상단 바 로고</div>
-<div>&emsp;││││├─ 📂 ModalComponent/　-----------> "완료"버튼 클릭 시 팝업 되는 모달</div>
-<div>&emsp;││││├─ 📂 Range/　-----------> EffectSlider에 사용되는 기본 range bar</div>
-<div>&emsp;││││├─ 📂 Slider/　-----------> 영상 섬네일 time slider 막대</div>
-<div>&emsp;││││├─ 📂 TimeText/　-----------> 영상 섬네일 time slider 막대 위 or currentTime에 시간 표시</div>
-<div>&emsp;││││└─ 📂 VolumeRange/　-----------> 음량 조절 range바</div>
-<div>&emsp;│││├┬ 📂 molecules/</div>
-<div>&emsp;││││├─ 📂 ButtonGroup/</div>
-<div>&emsp;││││├─ 📂 CropLayer/　-----------> react-range를 사용, left, right slide bar를 통해 영상 자름</div>
-<div>&emsp;││││├─ 📂 CurrentTime/　-----------> 섬네일 부분 좌상단 현재 재생 시간</div>
-<div>&emsp;││││├─ 📂 EffectSliders/　-----------> 필터효과 slide bar</div>
-<div>&emsp;││││├─ 📂 FileInput/　-----------> label을 이용한 불러오기 "로컬" 부분</div>
-<div>&emsp;││││├─ 📂 HoverSlider/　-----------> 영상 섬네일 마우스 호버링 시 slider & timetext 표시</div>
-<div>&emsp;││││├─ 📂 Modal/　-----------> TextInput 또는 Help컴포넌트를 받아 동적으로 팝업되는 모달</div>
-<div>&emsp;││││├─ 📂 Thumbnail/　-----------> 섬네일 위에서 일어나는 동적인 timeline 제어</div>
-<div>&emsp;││││├─ 📂 TimeZone/　-----------> 섬네일 상단 time zone 표기</div>
-<div>&emsp;││││└─ 📂 UploadArea/　-----------> 작업 영상 파일 불러오기 버튼</div>
-<div>&emsp;│││└┬ 📂 organisms/</div>
-<div>&emsp;│││&emsp;├─ 📂 Header/　-----------> 로고, 히스토리, help/완료/취소</div>
-<div>&emsp;│││&emsp;├─ 📂 TimeLine/　-----------> </div>
-<div>&emsp;│││&emsp;├─ 📂 Tools/　-----------> 재생/10초전후/음량, 기타 툴, 업로드 존</div>
-<div>&emsp;│││&emsp;└─ 📂 VideoContainer/　-----------> 비디오 preview</div>
-<div>&emsp;││├┬ 📂 pages/</div>
-<div>&emsp;│││└─ 📄 edit.tsx　-----------> 메인 페이지</div>
-<div>&emsp;││├┬ 📂 store/　-----------> store구성은 action/reducer[/sagas] 로 구성</div>
-<div>&emsp;│││├┬ 📂 crop/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││├─ 📄 reducer.ts</div>
-<div>&emsp;││││└─ 📄 sagas.ts</div>
-<div>&emsp;│││├┬ 📂 currentVideo/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││└─ 📄 reducer.ts</div>
-<div>&emsp;│││├┬ 📂 history/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││├─ 📄 reducer.ts</div>
-<div>&emsp;││││└─ 📄 sagas.ts</div>
-<div>&emsp;│││├┬ 📂 originVideo/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││├─ 📄 reducer.ts</div>
-<div>&emsp;││││└─ 📄 sagas.ts</div>
-<div>&emsp;│││├┬ 📂 user/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││└─ 📄 reducer.ts</div>
-<div>&emsp;│││├┬ 📂 video/</div>
-<div>&emsp;││││├─ 📄 actions.ts</div>
-<div>&emsp;││││├─ 📄 reducer.ts</div>
-<div>&emsp;││││└─ 📄 sagas.ts</div>
-<div>&emsp;│││├─ 📄 actionTypes.ts　-----------> 모든 액션 타입을 enum으로 구성</div>
-<div>&emsp;│││├─ 📄 reducer.ts</div>
-<div>&emsp;│││├─ 📄 sagas.ts</div>
-<div>&emsp;│││└─ 📄 selectors.ts</div>
-<div>&emsp;││├┬ 📂 theme/</div>
-<div>&emsp;│││├─ 📄 colors.tsx</div>
-<div>&emsp;│││├─ 📄 globalStyles.tsx</div>
-<div>&emsp;│││└─ 📄 sizes.ts</div>
-<div>&emsp;││├┬ 📂 utils/</div>
-<div>&emsp;│││├─ 📄 convert.ts</div>
-<div>&emsp;│││├─ 📄 error.ts</div>
-<div>&emsp;│││└─ 📄 time.ts</div>
-<div>&emsp;││├┬ 📂 video/</div>
-<div>&emsp;│││├─ 📄 encoding.ts</div>
-<div>&emsp;│││├─ 📄 index.tsx</div>
-<div>&emsp;│││├─ 📄 metadata.ts</div>
-<div>&emsp;│││├─ 📄 mux.ts</div>
-<div>&emsp;│││└─ 📄 video.tsx</div>
-<div>&emsp;││├┬ 📂 webgl/</div>
-<div>&emsp;│││├─ 📄 fragmentShaderSource.ts</div>
-<div>&emsp;│││├─ 📄 vertexShaderSource.ts</div>
-<div>&emsp;│││├─ 📄 webglConfig.ts</div>
-<div>&emsp;│││└─ 📄 webglController.ts</div>
-<div>&emsp;││├─ 📄 App.tsx</div>
-<div>&emsp;││├─ 📄 index.html</div>
-<div>&emsp;││└─ 📄 index.tsx</div>
-<div>&emsp;│├─ 📄 babel.config.js</div>
-<div>&emsp;│├─ 📄 package-lock.json</div>
-<div>&emsp;│├─ 📄 package.json</div>
-<div>&emsp;│├─ 📄 webpack.common.js</div>
-<div>&emsp;│├─ 📄 webpack.dev.ts</div>
-<div>&emsp;│└─ 📄 webpack.prod.ts</div>
-<div>&emsp;├┬ 📂 server/ - back-end</div>
-<div>&emsp;│├─ 📂 bin/</div>
-<div>&emsp;│├┬ 📂 src/main/</div>
-<div>&emsp;││├─ 📂 controllers/</div>
-<div>&emsp;││├─ 📂 loaders/</div>
-<div>&emsp;││├─ 📂 middlewares/</div>
-<div>&emsp;││├─ 📂 model/</div>
-<div>&emsp;││├─ 📂 routes/</div>
-<div>&emsp;││├─ 📂 services/</div>
-<div>&emsp;││├─ 📂 utils/</div>
-<div>&emsp;││└─ 📄 App.ts</div>
-<div>&emsp;│├─ 📄 package-lock.json</div>
-<div>&emsp;│├─ 📄 package.json</div>
-<div>&emsp;│└─ 📄 webpack.config.js</div>
-<div>&emsp;├─ 📄 .eslintignore</div>
-<div>&emsp;├─ 📄 .eslintrc.js</div>
-<div>&emsp;├─ 📄 .gitignore</div>
-<div>&emsp;├─ 📄 .gitmessage</div>
-<div>&emsp;├─ 📄 .prettierrc</div>
-<div>&emsp;├─ 📄 package-lock.json</div>
-<div>&emsp;├─ 📄 package.json</div>
-<div>&emsp;├─ 📄 READEME.md</div>
-<div>&emsp;└─ 📄 tsconfig.json</div>
+# 🌊 WAVE
+
+### 동영상 편집, 이제 브라우저만 여세요!  
+ 
+![logo](https://user-images.githubusercontent.com/49153756/101979687-79288800-3ca2-11eb-9119-474bcef90db2.gif)
+
+
+### [배포 주소 🖥 ](https://boostwave.ga/)
+
+### [데모 영상 🎞](https://www.youtube.com/watch?v=7TCaBNmKwSU)
+> 배포 주소로 확인할 수 없을 때 데모 영상으로 확인해주세요.
+
+**WAVE**(Web Application for Video Editing)는 **클라이언트 기반 웹 동영상🎥 편집기**로, 별도 프로그램을 설치할 필요 없이 **브라우저🌍만으로 작업이 가능합니다.** 영상의 편집 처리를 서버가 아닌 클라이언트에서 진행하여 서버의 부하도 많이 발생하지 않습니다.
+
+사용자는 로컬 또는 서버에서 영상을 불러와서 **UI를 통해 다양한 효과를 추가**하고, 그 결과물을 **다운로드 및 서버로 업로드**할 수 있습니다. 이는 HTML5의 \<video> element에서 원본 영상을 재생하며 프레임을 추출하고, 추출한 프레임마다 편집 효과를 적용한 후, 이를 합쳐서 mp4 파일을 만드는 방식으로 이루어집니다.
+
+동영상이 핸드폰으로 찍어 90° 돌아간 상태이거나, 맨 앞과 맨 뒤에 필요 없는 부분을 잘라내고 싶을 때, 동영상 편집 프로그램을 다운받아 실행하는 번거로운 작업 없이 **Chrome 브라우저를 켜서 WAVE를 시작하세요!**
+
+### [위키 보러가기 ➡️](https://github.com/boostcamp-2020/Project13-Web-Video-Editor/wiki)
+
+## 🌉 Features
+
+| **회전 / 반전**  | **확대 / 축소**  | 
+|:---:|:---:|
+| ![회전반전](https://user-images.githubusercontent.com/49153756/102684958-683ac200-4220-11eb-87c8-9a56e1cb5500.gif) | ![확대축소](https://user-images.githubusercontent.com/49153756/102684962-6b35b280-4220-11eb-9c59-5aa1497dd3f5.gif) | 
+| `90°/-90° 회전`, `상하/좌우 반전`이 가능합니다. | `확대/축소`, `4:3`, `16:9` 비율 조정이 가능합니다.  |  
+| **영상 자르기** | **서명 추가**   |
+| ![자르기](https://user-images.githubusercontent.com/49153756/102684963-6bce4900-4220-11eb-8766-2e0be16973ce.gif)  |  ![서명](https://user-images.githubusercontent.com/49153756/102684965-6cff7600-4220-11eb-8dc5-3238055f5273.gif)  |
+|  원하는 길이만큼 영상을 자를 수 있습니다.  |  로컬에서 이미지를 불러와서 영상에 서명을 추가할 수 있습니다. (워터마크 기능)  |
+| **각종 필터 적용**  | **편집 내역 관리**  |
+| ![필터](https://user-images.githubusercontent.com/49153756/102684966-6d980c80-4220-11eb-913a-b5004ee9d219.gif) | ![히스토리](https://user-images.githubusercontent.com/49153756/102684974-71c42a00-4220-11eb-95d3-0891d30ed507.gif)  |
+| `R,G,B` 값을 변경할 수 있고, `blur`효과 및 흑백 효과, 밝기 조절도 가능합니다!  | 편집 내역을 최대 20개까지 히스토리로 관리합니다. (서명, 필터 제외) |
+| **해상도 설정**  | **로컬 다운로드**  |
+| ![해상도설정](https://user-images.githubusercontent.com/49153756/102684967-6ec93980-4220-11eb-80df-a0137f414c87.gif)  | ![로컬다운](https://user-images.githubusercontent.com/49153756/102684968-6f61d000-4220-11eb-90cd-c5c7d31312ed.gif) |
+| 원하는 해상도를 설정하여 영상을 인코딩할 수 있습니다.  | 인코딩이 완료된 영상을 즉시 로컬로 다운로드 할 수 있습니다. |
+| **서버에서 불러오기**  | **도움말**  |
+| ![서버에서다운로드](https://user-images.githubusercontent.com/49153756/102684970-6ffa6680-4220-11eb-95b1-f6696b8fa712.gif) |![도움말](https://user-images.githubusercontent.com/49153756/102684971-7092fd00-4220-11eb-90dc-7ff0508fa19b.gif)  |
+| 편집했던 영상을 서버에서 불러와 추가적인 편집 작업도 가능합니다!  | WAVE의 사용법을 상세히 확인할 수 있습니다. |
+
+
+## 🏛 Web Architecture 
+![](https://i.imgur.com/X1Q9S7H.png)
+
+## 🚩 기술 스택
+![](https://i.imgur.com/zmyi5gG.png)
+
+> 자세한 설명은 [Wiki](https://github.com/boostcamp-2020/Project13-Web-Video-Editor/wiki/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D) 를 참고해주세요.
+
+## 👩‍ 팀원
+
+|  J017_권영언  |  J096_석민지  |  J103_신승현  |  J117_오지현  |
+| :----------: |  :--------:  |  :---------: |  :---------: |
+| [<img src="https://avatars0.githubusercontent.com/u/49153756?s=460&u=a475983d60adb9ddac3d55771bde039d545360dd&v=4" width=100 alt="_"/><br/>GitHub](https://github.com/kyu9341) | [<img src="https://user-images.githubusercontent.com/57527380/97649629-2486d000-1a9b-11eb-9887-4241aeb15753.png" width=100 alt="_"/><br/>GitHub](https://github.com/mjseok) |[<img src="https://user-images.githubusercontent.com/48575504/99213106-144b5080-2810-11eb-9c35-c8f84194c148.jpg" width=100 alt="_"><br/>GitHub](https://github.com/SSH1997) | [<img src="https://avatars1.githubusercontent.com/u/48315101?s=460&v=4" width=100 alt="_"/><br/>GitHub](https://github.com/joh16) |
+| 음음 🏳️‍🌈  |  ⭐👩‍💻⭐  | 😊 SSH ^^ㅎ 😊 |   🐾📏|
+
+
+<!-- treeparser 폴더구조 저장 -->
+<!-- wave/
+ .github
+ client/
+  src/
+   api/
+    index.ts
+    video.ts
+   componetns/
+    atoms/
+     Button/
+     Encoding/
+     Loading/
+     Logo/
+     ModalComponent/
+     Range/
+     Slider/
+     TimeText/
+     VolumeRange/
+    molecules/
+     ButtonGroup/
+     CropLayer/
+     CurrentTime/
+     EffectSliders/
+     FileInput/
+     HoverSlider/
+     Modal/
+     Thumbnail/
+     TimeZone/
+     UploadArea/
+    organisms/
+     Header/
+     TimeLine/
+     Tools/
+     VideoContainer/
+   pages/
+    edit.tsx
+   store/
+    crop/
+     actions.ts
+     reducer.ts
+     sagas.ts
+    currentVideo/
+     actions.ts
+     reducer.ts
+    history/
+     actions.ts
+     reducer.ts
+     sagas.ts
+    originVideo/
+     actions.ts
+     reducer.ts
+     sagas.ts
+    user/
+     actions.ts
+     reducer.ts
+    video/
+     actions.ts
+     reducer.ts
+     sagas.ts
+    actionTypes.ts
+    reducer.ts
+    sagas.ts
+    selectors.ts
+   theme/
+    colors.tsx
+    globalStyles.tsx
+    sizes.ts
+   utils/
+    convert.ts
+    error.ts
+    time.ts
+   video/
+    encoding.ts
+    index.tsx
+    metadata.ts
+    mux.ts
+    video.tsx
+   webgl/
+    fragmentShaderSource.ts
+    vertexShaderSource.ts
+    webglConfig.ts
+    webglController.ts
+   App.tsx
+   index.html
+   index.tsx
+  babel.config.js
+  package-lock.json
+  package.json
+  webpack.common.js
+  webpack.dev.ts
+  webpack.prod.ts
+ server/
+  bin/
+  src/main/
+   controllers/
+   loaders/
+   middlewares/
+   model/
+   routes/
+   services/
+   utils/
+   App.ts
+  package-lock.json
+  package.json
+  webpack.config.js
+ .eslintignore
+ .eslintrc.js
+ .gitignore
+ .gitmessage
+ .prettierrc
+ package-lock.json
+ package.json
+ READEME.md
+ tsconfig.json -->
